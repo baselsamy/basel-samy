@@ -4,6 +4,7 @@
 @import "@fontsource/inter/700.css";
 @import "@fontsource/playfair-display/600.css";
 @import "@fontsource/playfair-display/700.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -29,7 +30,7 @@
     --muted: 40 12% 92%;
     --muted-foreground: 220 10% 45%;
 
-    --accent: 38 92% 50%;
+    --accent: 173 80.3922% 40%;
     --accent-foreground: 220 20% 12%;
 
     --destructive: 0 84% 60%;
