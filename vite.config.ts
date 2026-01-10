@@ -5,7 +5,16 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // 🔑 REQUIRED for GitHub Pages (repo name)
   base: "/basel-samy/",
+
+  // 🔑 REQUIRED to make /docs the ONLY build output
+  build: {
+    outDir: "docs",
+    emptyOutDir: true,
+  },
+
+  // ✅ KEEP — used only for local dev
   server: {
     host: "::",
     port: 8080,
@@ -13,7 +22,14 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+
+  // ✅ KEEP — Lovable tagger only in dev
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(),
+  ].filter(Boolean),
+
+  // ✅ KEEP — path alias
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
