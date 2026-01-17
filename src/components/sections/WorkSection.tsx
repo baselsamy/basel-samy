@@ -99,7 +99,7 @@ const KeyInitiatives = () => (
         transition={{ delay: i * 0.1 }}
         className="glass-panel-elevated rounded-2xl overflow-hidden grid md:grid-cols-5 gap-0"
       >
-        <div className="md:col-span-2 overflow-hidden bg-muted">
+        <div className="md:col-span-2 overflow-hidden bg-white">
           <img
             src={item.image}
             alt={item.title}
