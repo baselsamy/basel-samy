@@ -57,7 +57,7 @@ const Hero = () => {
 
             <p className="text-muted-foreground text-sm md:text-base max-w-2xl">
               My work sits at the intersection of product thinking, program
-              management, and data-informed execution — supporting teams as they
+              management, and data-informed execution, supporting teams as they
               prioritise, deliver, and learn in complex, cross-functional
               environments.
             </p>

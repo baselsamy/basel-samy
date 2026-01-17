@@ -101,7 +101,7 @@ const AboutMe = () => (
         <div>
           <span className="text-muted-foreground">Expertise</span>
           <p className="font-medium text-foreground">
-            Strategy • Execution • Stakeholder Management • Data Analysis • Team Enablement
+            Strategy • Execution • Stakeholder Management • Data Analysis • Team Enablement • Agile (Scrum/Kanban)• Waterfall PM
           </p>
         </div>
 
