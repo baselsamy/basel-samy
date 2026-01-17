@@ -151,7 +151,7 @@ const artefacts = [
     description:
       "A structured program delivery plan outlining execution approach, governance cadence, risk management, and success metrics. Created as part of a take-home assessment for a senior delivery leadership role.",
     tag: "Interview / Take-home Assessment",
-    pdf: "/artefacts/Work Sample - Pathway Delivery Lead Assignment Submission - By Basel Samy - 17_4_2024.pdf",
+    pdf: "https://docs.google.com/document/d/12nFeOQsDwiescT2AZQBfKEVsbOCoEvrrGxBMyAsSMBY/edit?tab=t.0#heading=h.csjkra8tsszr",
   },
   {
     title:
@@ -159,7 +159,7 @@ const artefacts = [
     description:
       "Strategic planning exercise focused on growth levers, prioritisation, and execution sequencing. Developed as part of a senior role interview process.",
     tag: "Interview / Take-home Assessment",
-    pdf: "/artefacts/Work Sample - SandTech Job Assignment_ Strategic Plan Presentation.pdf",
+    pdf: "https://docs.google.com/presentation/d/1jhiNLJwbBvJFp2jpmX7Ii_jHKKSCjbWZCfgNkzZPH7Q/edit?slide=id.p#slide=id.p",
   },
   {
     title:
@@ -167,15 +167,15 @@ const artefacts = [
     description:
       "Operational planning artefact detailing delivery timelines, dependencies, and risk mitigation strategies. Produced as a structured hiring assignment.",
     tag: "Interview / Take-home Assessment",
-    pdf: "/artefacts/Work Sample - Task C _ Operational Plan.pdf",
+    pdf: "https://docs.google.com/document/d/1-2u1hpeMIkOePlnyCcxeFFGLPq5mKbj3-mU7KIc9X3k/edit?tab=t.0#heading=h.jeia4svhey2j",
   },
   {
     title:
-      "Ptah Crafts — Marketplace Concept, Strategy & Early Execution",
+      "Ptah Crafts: Marketplace Concept, Strategy & Early Execution",
     description:
       "Internal product and strategy deck covering problem framing, market opportunity, positioning, business model, and execution roadmap for Ptah Crafts.",
     tag: "Company Work (Ptah Crafts)",
-    pdf: "/artefacts/Work_Sample- Ptah Crafts Deck.pdf",
+    pdf: "https://docs.google.com/presentation/d/1Y4F5CpJ5fQJijpcQ_6DKwD7AUJPDY6N_kutaZxBUcAY/edit?slide=id.g3829522de4a_0_1362#slide=id.g3829522de4a_0_1362",
   },
 ];
 
