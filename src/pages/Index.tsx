@@ -33,7 +33,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Fixed Hero */}
+      {/* Fixed Hero (Phase 1 content lives inside Hero.tsx) */}
       <Hero />
 
       {/* Primary Tabs Navigation */}
@@ -58,8 +58,8 @@ const Index = () => {
       <footer className="border-t border-border mt-12">
         <div className="max-w-5xl mx-auto px-6 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <p>© 2026 John Doe. All rights reserved.</p>
-            <p>Built with precision and passion.</p>
+            <p>© 2026 Basel Samy. All rights reserved.</p>
+            <p>Built with precision and impact.</p>
           </div>
         </div>
       </footer>
