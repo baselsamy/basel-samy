@@ -125,7 +125,7 @@ const ExperienceHighlights = () => (
     <div className="grid md:grid-cols-3 gap-4">
       {[
         {
-          metric: "National",
+          metric: "International",
           label: "Program & Product Scale",
           icon: <Target className="w-6 h-6" />,
         },
@@ -135,7 +135,7 @@ const ExperienceHighlights = () => (
           icon: <Award className="w-6 h-6" />,
         },
         {
-          metric: "Cross-Func",
+          metric: "Cross-Functional",
           label: "Multi-disciplinary Teams",
           icon: <Heart className="w-6 h-6" />,
         },
