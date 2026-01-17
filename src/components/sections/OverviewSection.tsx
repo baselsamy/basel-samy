@@ -37,6 +37,10 @@ const OverviewSection = () => {
   );
 };
 
+/* =========================
+   ABOUT ME
+========================= */
+
 const AboutMe = () => (
   <div className="grid md:grid-cols-2 gap-8">
     <div className="space-y-4">
@@ -45,46 +49,66 @@ const AboutMe = () => (
       </h3>
 
       <p className="text-muted-foreground leading-relaxed">
-        I’m a senior product, program, and operations leader who specialises in
-        turning strategic intent into measurable outcomes. My work sits at the
+        I am a senior product and program leader who specialises in turning
+        strategic intent into measurable outcomes. My work sits at the
         intersection of product vision, delivery reality, and stakeholder
-        expectations, where clarity, prioritisation, and execution discipline
+        expectations — where clarity, prioritisation, and execution discipline
         matter most.
       </p>
 
       <p className="text-muted-foreground leading-relaxed">
-        Over the past 12+ years, I’ve operated across technology, education,
-        marketplaces, and emerging AI-driven products, leading complex
-        initiatives that span multiple stakeholders, geographies, and delivery
-        models. I’m most effective in ambiguous environments where the problem
-        is not just what to build, but how to align people, systems, and
-        incentives to deliver sustainable value.
+        Over the past 12+ years, I’ve worked across technology, education,
+        marketplaces, and data-driven products, leading complex initiatives that
+        span multiple stakeholders, cross-functional teams, and delivery models.
+        I’m most effective in ambiguous environments where the challenge is not
+        only what to build, but how to execute reliably and learn quickly.
       </p>
     </div>
 
+    {/* QUICK FACTS */}
     <div className="glass-panel rounded-2xl p-6 space-y-4">
       <h4 className="font-semibold text-foreground">Quick Facts</h4>
 
       <div className="grid grid-cols-2 gap-4 text-sm">
         <div>
           <span className="text-muted-foreground">Focus</span>
-          <p className="font-medium text-foreground">Product + Program + Ops</p>
+          <p className="font-medium text-foreground">
+            Product & Program Delivery
+          </p>
         </div>
 
         <div>
           <span className="text-muted-foreground">Experience</span>
-          <p className="font-medium text-foreground">12+ Years</p>
+          <p className="font-medium text-foreground">
+            12+ years building and scaling products & programs
+          </p>
+        </div>
+
+        <div>
+          <span className="text-muted-foreground">Scope</span>
+          <p className="font-medium text-foreground">
+            Complex, multi-stakeholder initiatives & cross-functional environments
+          </p>
         </div>
 
         <div>
           <span className="text-muted-foreground">Strength</span>
-          <p className="font-medium text-foreground">Ambiguity → Clarity</p>
+          <p className="font-medium text-foreground">
+            Strategy execution & insight-driven product and program decisions
+          </p>
+        </div>
+
+        <div>
+          <span className="text-muted-foreground">Expertise</span>
+          <p className="font-medium text-foreground">
+            Strategy • Execution • Stakeholder Management • Data Analysis • Team Enablement
+          </p>
         </div>
 
         <div>
           <span className="text-muted-foreground">Availability</span>
           <p className="font-medium text-accent">
-            Consulting • Contract • Leadership
+            Open to full-time roles & Consulting work
           </p>
         </div>
       </div>
@@ -92,23 +116,27 @@ const AboutMe = () => (
   </div>
 );
 
+/* =========================
+   EXPERIENCE HIGHLIGHTS
+========================= */
+
 const ExperienceHighlights = () => (
   <div className="space-y-6">
     <div className="grid md:grid-cols-3 gap-4">
       {[
         {
-          metric: "150K+",
-          label: "Users Served (Egypt FWD)",
+          metric: "National",
+          label: "Program & Product Scale",
           icon: <Target className="w-6 h-6" />,
         },
         {
-          metric: "25K+",
-          label: "Career Services Users",
+          metric: "0 → 1",
+          label: "Product & Initiative Launches",
           icon: <Award className="w-6 h-6" />,
         },
         {
-          metric: "2-Sided",
-          label: "Marketplace Built & Operated",
+          metric: "Cross-Func",
+          label: "Multi-disciplinary Teams",
           icon: <Heart className="w-6 h-6" />,
         },
       ].map((item, i) => (
@@ -122,7 +150,7 @@ const ExperienceHighlights = () => (
           <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
             {item.icon}
           </div>
-          <p className="font-display text-3xl font-bold text-foreground">
+          <p className="font-display text-2xl font-bold text-foreground">
             {item.metric}
           </p>
           <p className="text-muted-foreground text-sm mt-1">{item.label}</p>
@@ -138,34 +166,34 @@ const ExperienceHighlights = () => (
       <div className="space-y-4">
         {[
           {
-            title: "Two-sided marketplace launch & operations",
+            title: "Product & marketplace launches",
             detail:
-              "Launched and operated Ptah Crafts, owning product positioning, vendor experience, onboarding flows, and early growth, while balancing product ambition with operational reality.",
+              "Launched and operated a two-sided marketplace, owning product positioning, onboarding flows, and early growth while balancing execution constraints and learning velocity.",
           },
           {
-            title: "National-scale program ecosystem leadership",
+            title: "Large-scale programs & ecosystems",
             detail:
-              "Led Egypt FWD, aligning government stakeholders with product, data, and delivery teams to execute at national scale with clear outcomes and constraints.",
+              "Led national and multi-stakeholder programs, aligning government, product, data, and delivery teams around shared outcomes and execution plans.",
           },
           {
-            title: "Career services and coaching product scaling",
+            title: "Product-led services & offerings",
             detail:
-              "Designed and scaled career services and coaching products to 25K+ users, balancing customer value, operational feasibility, and unit economics.",
+              "Designed and scaled user-facing services and programs, balancing customer value, operational feasibility, and measurable success metrics.",
           },
           {
-            title: "Strategy → roadmap → metrics → iteration",
+            title: "Strategy execution & operating models",
             detail:
-              "Translated strategy into roadmaps, success metrics, and operating models, enabling teams to focus on what matters and learn fast through measurable feedback loops.",
+              "Translated strategic goals into roadmaps, delivery plans, and metrics that helped teams focus, execute, and adapt quickly.",
           },
           {
-            title: "Measurement systems and KPI design",
+            title: "Measurement & insight generation",
             detail:
-              "Built performance measurement systems across product health, customer experience, and operational delivery, enabling rapid course correction and stakeholder transparency.",
+              "Built KPI frameworks and reporting mechanisms to track progress, surface insights, and support data-informed decision making.",
           },
           {
-            title: "Cross-functional delivery under real constraints",
+            title: "Cross-functional delivery",
             detail:
-              "Partnered closely with engineering, data, and design to prioritise features, manage trade-offs, and ship incrementally without losing the strategic thread.",
+              "Worked closely with engineering, design, and data teams to prioritise work, manage trade-offs, and deliver incrementally under real constraints.",
           },
         ].map((item, i) => (
           <div key={i} className="space-y-1">
@@ -180,6 +208,10 @@ const ExperienceHighlights = () => (
   </div>
 );
 
+/* =========================
+   VALUES & APPROACH
+========================= */
+
 const ValuesApproach = () => (
   <div className="grid md:grid-cols-2 gap-6">
     {[
@@ -191,17 +223,17 @@ const ValuesApproach = () => (
       {
         title: "Focus & learning velocity",
         description:
-          "I care about teams working on the few things that truly matter, measuring outcomes, and adapting quickly when assumptions prove wrong.",
+          "I prioritise focus on what matters most, using feedback and metrics to learn quickly and adapt when assumptions change.",
       },
       {
-        title: "Balance innovation with control",
+        title: "Balance strategy and execution",
         description:
-          "I design operating models that support fast iteration while maintaining governance, accountability, and predictable delivery.",
+          "I connect strategy to delivery by designing practical plans, governance, and rhythms that teams can realistically execute.",
       },
       {
-        title: "Turn strategy into operating models",
+        title: "Data-informed decision making",
         description:
-          "Teams rely on me to translate unclear strategy into roadmaps, metrics, and execution rhythms that keep complex programs moving when things get messy.",
+          "I use data and insights to guide prioritisation, evaluate progress, and support transparent decision making across stakeholders.",
       },
     ].map((value, i) => (
       <motion.div
@@ -211,7 +243,9 @@ const ValuesApproach = () => (
         transition={{ delay: i * 0.1 }}
         className="glass-panel rounded-2xl p-6"
       >
-        <h4 className="font-semibold text-foreground mb-2">{value.title}</h4>
+        <h4 className="font-semibold text-foreground mb-2">
+          {value.title}
+        </h4>
         <p className="text-muted-foreground text-sm leading-relaxed">
           {value.description}
         </p>
