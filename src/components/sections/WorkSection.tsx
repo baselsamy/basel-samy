@@ -45,10 +45,12 @@ const WorkSection = () => {
    KEY INITIATIVES
 ========================= */
 
+const imageBase = import.meta.env.BASE_URL;
+
 const initiatives = [
   {
     title: "Egypt FWD — National Digital Upskilling Program",
-    image: "/images/egypt-fwd.jpg",
+    image: `${imageBase}images/egypt-fwd.jpg`,
     description:
       "Led delivery across a national-scale digital upskilling initiative, coordinating multiple stakeholders across government, education partners, and delivery teams.",
     scope: [
@@ -61,7 +63,7 @@ const initiatives = [
   },
   {
     title: "Udacity — Career Services & Coaching Products",
-    image: "/images/udacity-careers.jpg",
+    image: `${imageBase}images/udacity-careers.jpg`,
     description:
       "Designed and scaled career services embedded within large-scale digital learning programs, balancing learner value with operational feasibility.",
     scope: [
@@ -74,7 +76,7 @@ const initiatives = [
   },
   {
     title: "Ptah Crafts — Two-Sided Marketplace (Founder-led)",
-    image: "/images/ptah-crafts.jpg",
+    image: `${imageBase}images/ptah-crafts.jpg`,
     description:
       "Launched and operated an early-stage, video-first marketplace connecting premium artisans with end customers in the Middle East.",
     scope: [
