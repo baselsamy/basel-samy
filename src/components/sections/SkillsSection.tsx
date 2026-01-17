@@ -1,23 +1,37 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SecondaryTabs from "../SecondaryTabs";
-import { 
-  Target, Users, TrendingUp, Code, Database, Cloud, 
-  Figma, Slack, GitBranch, Trello, BarChart3, Zap 
+import {
+  Target,
+  Users,
+  TrendingUp,
+  BarChart3,
+  Layers,
+  Workflow,
+  Figma,
+  Slack,
+  GitBranch,
+  Trello,
+  Database,
+  Cloud,
 } from "lucide-react";
 
 const secondaryTabs = [
-  { id: "strategy", label: "Strategy & Leadership" },
-  { id: "technical", label: "Technical Skills" },
+  { id: "product", label: "Product & Program" },
+  { id: "execution", label: "Execution & Analysis" },
   { id: "tools", label: "Tools & Platforms" },
 ];
 
 const SkillsSection = () => {
-  const [activeTab, setActiveTab] = useState("strategy");
+  const [activeTab, setActiveTab] = useState("product");
 
   return (
     <div>
-      <SecondaryTabs tabs={secondaryTabs} activeTab={activeTab} onTabChange={setActiveTab} />
+      <SecondaryTabs
+        tabs={secondaryTabs}
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+      />
 
       <AnimatePresence mode="wait">
         <motion.div
@@ -27,8 +41,8 @@ const SkillsSection = () => {
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2 }}
         >
-          {activeTab === "strategy" && <StrategyLeadership />}
-          {activeTab === "technical" && <TechnicalSkills />}
+          {activeTab === "product" && <ProductProgram />}
+          {activeTab === "execution" && <ExecutionAnalysis />}
           {activeTab === "tools" && <ToolsPlatforms />}
         </motion.div>
       </AnimatePresence>
@@ -36,13 +50,44 @@ const SkillsSection = () => {
   );
 };
 
-const StrategyLeadership = () => (
+/* =========================
+   PRODUCT & PROGRAM
+========================= */
+
+const ProductProgram = () => (
   <div className="space-y-6">
     <div className="grid md:grid-cols-3 gap-4">
       {[
-        { icon: <Target className="w-6 h-6" />, title: "Product Strategy", skills: ["Roadmap Planning", "Market Analysis", "OKR Definition", "Vision Setting"] },
-        { icon: <Users className="w-6 h-6" />, title: "Team Leadership", skills: ["Team Building", "Mentorship", "Agile Coaching", "Cross-functional Collaboration"] },
-        { icon: <TrendingUp className="w-6 h-6" />, title: "Growth & Scale", skills: ["GTM Strategy", "User Acquisition", "Retention Optimization", "Revenue Growth"] },
+        {
+          icon: <Target className="w-6 h-6" />,
+          title: "Product Strategy",
+          skills: [
+            "Problem Framing",
+            "Roadmap Definition",
+            "Prioritisation & Trade-offs",
+            "Outcome Definition",
+          ],
+        },
+        {
+          icon: <Workflow className="w-6 h-6" />,
+          title: "Program Delivery",
+          skills: [
+            "Initiative Planning",
+            "Cross-functional Coordination",
+            "Dependency Management",
+            "Delivery Governance",
+          ],
+        },
+        {
+          icon: <Users className="w-6 h-6" />,
+          title: "Stakeholder Management",
+          skills: [
+            "Executive Communication",
+            "Expectation Alignment",
+            "Decision Facilitation",
+            "Risk & Constraint Management",
+          ],
+        },
       ].map((category, i) => (
         <motion.div
           key={category.title}
@@ -54,10 +99,14 @@ const StrategyLeadership = () => (
           <div className="w-12 h-12 mb-4 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
             {category.icon}
           </div>
-          <h4 className="font-semibold text-foreground mb-3">{category.title}</h4>
+          <h4 className="font-semibold text-foreground mb-3">
+            {category.title}
+          </h4>
           <div className="flex flex-wrap gap-2">
             {category.skills.map((skill) => (
-              <span key={skill} className="skill-chip text-xs">{skill}</span>
+              <span key={skill} className="skill-chip text-xs">
+                {skill}
+              </span>
             ))}
           </div>
         </motion.div>
@@ -66,29 +115,53 @@ const StrategyLeadership = () => (
   </div>
 );
 
-const TechnicalSkills = () => (
+/* =========================
+   EXECUTION & ANALYSIS
+========================= */
+
+const ExecutionAnalysis = () => (
   <div className="space-y-6">
     <div className="grid md:grid-cols-2 gap-6">
       {[
-        { 
-          icon: <Code className="w-6 h-6" />, 
-          title: "Frontend Development",
-          skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js", "Redux"]
+        {
+          icon: <TrendingUp className="w-6 h-6" />,
+          title: "Strategy Execution",
+          skills: [
+            "Translating Strategy into Plans",
+            "OKRs & Success Metrics",
+            "Execution Tracking",
+            "Continuous Improvement",
+          ],
         },
-        { 
-          icon: <Database className="w-6 h-6" />, 
-          title: "Backend & Data",
-          skills: ["Node.js", "Python", "PostgreSQL", "MongoDB", "GraphQL", "REST APIs"]
+        {
+          icon: <BarChart3 className="w-6 h-6" />,
+          title: "Data & Insights",
+          skills: [
+            "KPI Definition",
+            "Performance Analysis",
+            "Insight Generation",
+            "Decision Support",
+          ],
         },
-        { 
-          icon: <Cloud className="w-6 h-6" />, 
-          title: "Cloud & DevOps",
-          skills: ["AWS", "GCP", "Docker", "Kubernetes", "CI/CD", "Terraform"]
+        {
+          icon: <Layers className="w-6 h-6" />,
+          title: "Operating Models",
+          skills: [
+            "Delivery Frameworks",
+            "Team Rituals & Cadence",
+            "Governance Design",
+            "Scalable Processes",
+          ],
         },
-        { 
-          icon: <Zap className="w-6 h-6" />, 
-          title: "Emerging Tech",
-          skills: ["AI/ML Integration", "LLMs", "Web3", "IoT", "Edge Computing"]
+        {
+          icon: <Cloud className="w-6 h-6" />,
+          title: "Technical Fluency",
+          skills: [
+            "Working with Engineering Teams",
+            "System Constraints Awareness",
+            "Data & Platform Literacy",
+            "AI / Tech Product Context",
+          ],
         },
       ].map((category, i) => (
         <motion.div
@@ -102,11 +175,15 @@ const TechnicalSkills = () => (
             <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
               {category.icon}
             </div>
-            <h4 className="font-semibold text-foreground">{category.title}</h4>
+            <h4 className="font-semibold text-foreground">
+              {category.title}
+            </h4>
           </div>
           <div className="flex flex-wrap gap-2">
             {category.skills.map((skill) => (
-              <span key={skill} className="skill-chip">{skill}</span>
+              <span key={skill} className="skill-chip">
+                {skill}
+              </span>
             ))}
           </div>
         </motion.div>
@@ -115,6 +192,10 @@ const TechnicalSkills = () => (
   </div>
 );
 
+/* =========================
+   TOOLS & PLATFORMS
+========================= */
+
 const ToolsPlatforms = () => (
   <div className="space-y-6">
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -122,11 +203,11 @@ const ToolsPlatforms = () => (
         { icon: <Figma className="w-8 h-8" />, name: "Figma", category: "Design" },
         { icon: <Slack className="w-8 h-8" />, name: "Slack", category: "Communication" },
         { icon: <GitBranch className="w-8 h-8" />, name: "GitHub", category: "Version Control" },
-        { icon: <Trello className="w-8 h-8" />, name: "Jira", category: "Project Management" },
+        { icon: <Trello className="w-8 h-8" />, name: "Jira", category: "Program Management" },
         { icon: <BarChart3 className="w-8 h-8" />, name: "Amplitude", category: "Analytics" },
-        { icon: <Database className="w-8 h-8" />, name: "Mixpanel", category: "Analytics" },
-        { icon: <Cloud className="w-8 h-8" />, name: "Vercel", category: "Deployment" },
-        { icon: <Zap className="w-8 h-8" />, name: "Linear", category: "Project Management" },
+        { icon: <Database className="w-8 h-8" />, name: "SQL / Data Tools", category: "Data" },
+        { icon: <Cloud className="w-8 h-8" />, name: "Cloud Platforms", category: "Infrastructure" },
+        { icon: <Layers className="w-8 h-8" />, name: "Documentation & Planning", category: "Delivery" },
       ].map((tool, i) => (
         <motion.div
           key={tool.name}
@@ -138,8 +219,12 @@ const ToolsPlatforms = () => (
           <div className="w-14 h-14 mx-auto mb-3 rounded-xl bg-secondary flex items-center justify-center text-foreground">
             {tool.icon}
           </div>
-          <p className="font-medium text-foreground text-sm">{tool.name}</p>
-          <p className="text-muted-foreground text-xs">{tool.category}</p>
+          <p className="font-medium text-foreground text-sm">
+            {tool.name}
+          </p>
+          <p className="text-muted-foreground text-xs">
+            {tool.category}
+          </p>
         </motion.div>
       ))}
     </div>
