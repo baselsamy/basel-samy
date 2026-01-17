@@ -48,7 +48,7 @@ const AboutMe = () => (
         I’m a senior product, program, and operations leader who specialises in
         turning strategic intent into measurable outcomes. My work sits at the
         intersection of product vision, delivery reality, and stakeholder
-        expectations — where clarity, prioritisation, and execution discipline
+        expectations, where clarity, prioritisation, and execution discipline
         matter most.
       </p>
 
@@ -57,7 +57,7 @@ const AboutMe = () => (
         marketplaces, and emerging AI-driven products, leading complex
         initiatives that span multiple stakeholders, geographies, and delivery
         models. I’m most effective in ambiguous environments where the problem
-        is not just what to build — but how to align people, systems, and
+        is not just what to build, but how to align people, systems, and
         incentives to deliver sustainable value.
       </p>
     </div>
@@ -140,7 +140,7 @@ const ExperienceHighlights = () => (
           {
             title: "Two-sided marketplace launch & operations",
             detail:
-              "Launched and operated Ptah Crafts, owning product positioning, vendor experience, onboarding flows, and early growth — while balancing product ambition with operational reality.",
+              "Launched and operated Ptah Crafts, owning product positioning, vendor experience, onboarding flows, and early growth, while balancing product ambition with operational reality.",
           },
           {
             title: "National-scale program ecosystem leadership",
@@ -160,7 +160,7 @@ const ExperienceHighlights = () => (
           {
             title: "Measurement systems and KPI design",
             detail:
-              "Built performance measurement systems across product health, customer experience, and operational delivery — enabling rapid course correction and stakeholder transparency.",
+              "Built performance measurement systems across product health, customer experience, and operational delivery, enabling rapid course correction and stakeholder transparency.",
           },
           {
             title: "Cross-functional delivery under real constraints",
