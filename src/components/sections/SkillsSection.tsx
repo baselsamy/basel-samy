@@ -68,6 +68,9 @@ const ProductProgram = () => (
             "Requirements Definition",
             "Prioritisation",
             "Stakeholder Needs Translation",
+            "Value Creation",
+            "Agile Methodologies",
+            "Scrum & Kanban",
           ],
         },
         {
@@ -80,6 +83,11 @@ const ProductProgram = () => (
             "Delivery Tracking",
             "Risk & Issue Management",
             "Delivery Governance",
+            "Resource Allocation",
+            "Change Management",
+            "Waterfall & Hybrid Approaches",
+            "Vendor Management",
+            "Budget Oversight",
           ],
         },
         {
