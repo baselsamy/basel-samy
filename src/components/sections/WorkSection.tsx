@@ -3,6 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import SecondaryTabs from "../SecondaryTabs";
 import { ExternalLink, FileText } from "lucide-react";
 
+/* =========================
+   TABS CONFIG
+========================= */
+
 const secondaryTabs = [
   { id: "initiatives", label: "Key Initiatives" },
   { id: "artefacts", label: "Work Samples (Artefacts)" },
@@ -43,43 +47,43 @@ const WorkSection = () => {
 
 const initiatives = [
   {
-    title: "Egypt FWD – National Digital Upskilling Program",
+    title: "Egypt FWD — National Digital Upskilling Program",
     image: "/images/egypt-fwd.jpg",
     description:
-      "Led delivery and coordination across a national-scale, multi-stakeholder digital education ecosystem.",
+      "Led delivery across a national-scale digital upskilling initiative, coordinating multiple stakeholders across government, education partners, and delivery teams.",
     scope: [
-      "Program planning and execution across multiple learning tracks",
-      "Alignment between government stakeholders and delivery partners",
-      "Operational cadence, reporting, and risk management",
+      "Program planning, execution, and delivery governance",
+      "Cross-stakeholder alignment and operational coordination",
+      "Progress tracking, risk management, and reporting cadence",
     ],
     outcome:
-      "Established a scalable delivery model supporting complex program rollouts.",
+      "Enabled consistent delivery across a complex, multi-track program operating at national scale.",
   },
   {
-    title: "Udacity – Career Services & Coaching Products",
+    title: "Udacity — Career Services & Coaching Products",
     image: "/images/udacity-careers.jpg",
     description:
-      "Designed and scaled career support offerings embedded within global digital learning programs.",
+      "Designed and scaled career services embedded within large-scale digital learning programs, balancing learner value with operational feasibility.",
     scope: [
-      "Service model definition and success metrics",
-      "Coordination with product, mentors, and delivery teams",
-      "Balancing learner value with operational feasibility",
+      "Service design and delivery models",
+      "Success metrics and performance tracking",
+      "Collaboration with product, data, and delivery teams",
     ],
     outcome:
-      "Enabled consistent learner experience while supporting program scale.",
+      "Supported scalable career outcomes while maintaining quality and operational control.",
   },
   {
-    title: "Ptah Crafts – Two-Sided Marketplace",
+    title: "Ptah Crafts — Two-Sided Marketplace (Founder-led)",
     image: "/images/ptah-crafts.jpg",
     description:
-      "Launched and operated an early-stage marketplace connecting artisans with end customers.",
+      "Launched and operated an early-stage, video-first marketplace connecting premium artisans with end customers in the Middle East.",
     scope: [
-      "Product positioning and vendor onboarding",
-      "Early operating assumptions and constraints",
-      "Hands-on iteration across product and delivery",
+      "Product positioning and marketplace concept definition",
+      "Vendor onboarding and early operating assumptions",
+      "Hands-on execution across product and program delivery",
     ],
     outcome:
-      "Validated marketplace mechanics and informed next-stage decisions.",
+      "Validated marketplace dynamics and informed roadmap and go-to-market decisions.",
   },
 ];
 
@@ -97,31 +101,30 @@ const KeyInitiatives = () => (
           src={item.image}
           alt={item.title}
           className="w-full h-48 object-cover"
+          loading="lazy"
         />
 
         <div className="p-6">
-          <h3 className="font-display text-xl font-bold mb-2">
+          <h3 className="font-display text-xl font-bold text-foreground mb-2">
             {item.title}
           </h3>
+
           <p className="text-muted-foreground text-sm mb-4">
             {item.description}
           </p>
 
           <div className="grid md:grid-cols-3 gap-4 text-sm">
             <div>
-              <span className="text-accent font-medium block mb-1">
-                Scope
-              </span>
+              <span className="text-accent font-medium block mb-1">Scope</span>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 {item.scope.map((s) => (
                   <li key={s}>{s}</li>
                 ))}
               </ul>
             </div>
+
             <div className="md:col-span-2">
-              <span className="text-accent font-medium block mb-1">
-                Outcome
-              </span>
+              <span className="text-accent font-medium block mb-1">Outcome</span>
               <p className="text-muted-foreground">{item.outcome}</p>
             </div>
           </div>
@@ -132,37 +135,41 @@ const KeyInitiatives = () => (
 );
 
 /* =========================
-   ARTEFACTS
+   WORK SAMPLES – ARTEFACTS
 ========================= */
 
 const artefacts = [
   {
-    title: "Product Strategy & Execution Proposal",
+    title:
+      "Program Delivery Model & Execution Plan (Pathway Delivery Lead Assessment)",
     description:
-      "Product direction and execution plan created as part of an interview take-home assessment.",
-    link:
-      "https://docs.google.com/document/d/12nFeOQsDwiescT2AZQBfKEVsbOCoEvrrGxBMyAsSMBY",
+      "A structured program delivery plan outlining execution approach, governance cadence, risk management, and success metrics. Created as part of a take-home assessment for a senior delivery leadership role.",
+    tag: "Interview / Take-home Assessment",
+    pdf: "/artefacts/Work Sample - Pathway Delivery Lead Assignment Submission - By Basel Samy - 17_4_2024.pdf",
   },
   {
-    title: "Program Delivery & Metrics Framework",
+    title:
+      "Strategic Growth & Execution Plan (SandTech Hiring Assignment)",
     description:
-      "End-to-end delivery model and measurement approach from a hiring assessment.",
-    link:
-      "https://docs.google.com/presentation/d/1jhiNLJwbBvJFp2jpmX7Ii_jHKKSCjbWZCfgNkzZPH7Q",
+      "Strategic planning exercise focused on growth levers, prioritisation, and execution sequencing. Developed as part of a senior role interview process.",
+    tag: "Interview / Take-home Assessment",
+    pdf: "/artefacts/Work Sample - SandTech Job Assignment_ Strategic Plan Presentation.pdf",
   },
   {
-    title: "Operational Planning & Risk Analysis",
+    title:
+      "Operational Planning & Risk Assessment Framework",
     description:
-      "Structured planning and risk evaluation exercise from a program leadership interview.",
-    link:
-      "https://docs.google.com/document/d/1-2u1hpeMIkOePlnyCcxeFFGLPq5mKbj3-mU7KIc9X3k",
+      "Operational planning artefact detailing delivery timelines, dependencies, and risk mitigation strategies. Produced as a structured hiring assignment.",
+    tag: "Interview / Take-home Assessment",
+    pdf: "/artefacts/Work Sample - Task C _ Operational Plan.pdf",
   },
   {
-    title: "Strategic Roadmap & Execution Narrative",
+    title:
+      "Ptah Crafts — Marketplace Concept, Strategy & Early Execution",
     description:
-      "Roadmap and execution narrative developed during a product leadership interview.",
-    link:
-      "https://docs.google.com/presentation/d/1Y4F5CpJ5fQJijpcQ_6DKwD7AUJPDY6N_kutaZxBUcAY",
+      "Internal product and strategy deck covering problem framing, market opportunity, positioning, business model, and execution roadmap for Ptah Crafts.",
+    tag: "Company Work (Ptah Crafts)",
+    pdf: "/artefacts/Work_Sample- Ptah Crafts Deck.pdf",
   },
 ];
 
@@ -177,48 +184,63 @@ const Artefacts = () => (
         className="glass-panel rounded-2xl p-6 flex flex-col justify-between"
       >
         <div>
-          <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+          <div className="flex items-start justify-between gap-3 mb-2">
+            <h3 className="font-semibold text-foreground text-lg leading-snug">
+              {item.title}
+            </h3>
+            <span className="text-xs px-2 py-1 rounded-full bg-accent/10 text-accent whitespace-nowrap">
+              {item.tag}
+            </span>
+          </div>
+
           <p className="text-muted-foreground text-sm mb-4">
             {item.description}
           </p>
-          <p className="text-muted-foreground text-xs italic mb-4">
-            Created as part of an interview or take-home assessment
-          </p>
+
+          {item.tag.includes("Interview") && (
+            <p className="text-muted-foreground text-xs italic mb-4">
+              Created as part of an interview or take-home assessment
+            </p>
+          )}
         </div>
 
-        <a
-          href={item.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 mt-auto btn-hero-secondary"
-        >
-          <FileText className="w-4 h-4" />
-          View Document
-        </a>
+        <div className="mt-auto">
+          <a
+            href={item.pdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-hero-primary inline-flex items-center gap-2"
+          >
+            <FileText className="w-4 h-4" />
+            View Document
+          </a>
+        </div>
       </motion.div>
     ))}
   </div>
 );
 
 /* =========================
-   DATA VISUALISATION
+   WORK SAMPLES – DATA VIZ
 ========================= */
 
 const DataViz = () => (
   <div className="space-y-10">
     <TableauCard
       title="Program Performance & Outcome Analysis"
-      description="Exploratory dashboard focused on understanding performance trends and outcomes."
+      description="Exploratory dashboard focused on performance trends and outcome analysis."
       src="https://public.tableau.com/shared/6MFJGM55P?:showVizHome=no&embed=true"
     />
+
     <TableauCard
       title="Population & Income Group Trends"
       description="Visual exploration of population distribution across income groups over time."
       src="https://public.tableau.com/shared/GRYC69YWB?:showVizHome=no&embed=true"
     />
+
     <TableauCard
-      title="Business Performance Analysis (Assessment)"
-      description="Dashboard developed as part of a data-focused hiring assessment."
+      title="Business Performance Analysis (Hiring Assessment)"
+      description="Dashboard developed as part of a data-focused hiring assignment."
       src="https://public.tableau.com/views/SandtechAssignment/Sheet1?:showVizHome=no&embed=true"
     />
   </div>
@@ -234,12 +256,13 @@ const TableauCard = ({
   src: string;
 }) => (
   <div className="glass-panel rounded-2xl p-4">
-    <h3 className="font-semibold mb-2">{title}</h3>
+    <h3 className="font-semibold text-foreground mb-2">{title}</h3>
     <p className="text-muted-foreground text-sm mb-4">{description}</p>
+
     <iframe
       src={src}
       width="100%"
-      height="500"
+      height="520"
       loading="lazy"
       className="rounded-xl border"
     />
