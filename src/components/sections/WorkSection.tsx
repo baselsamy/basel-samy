@@ -97,27 +97,30 @@ const KeyInitiatives = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: i * 0.1 }}
-        className="glass-panel-elevated rounded-2xl overflow-hidden"
+        className="glass-panel-elevated rounded-2xl overflow-hidden grid md:grid-cols-5 gap-0"
       >
-        <img
-          src={item.image}
-          alt={item.title}
-          className="w-full h-48 object-cover"
-          loading="lazy"
-        />
+        <div className="md:col-span-2 overflow-hidden bg-muted">
+          <img
+            src={item.image}
+            alt={item.title}
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
 
-        <div className="p-6">
-          <h3 className="font-display text-xl font-bold text-foreground mb-2">
-            {item.title}
-          </h3>
+        <div className="md:col-span-3 p-6 flex flex-col justify-between">
+          <div>
+            <h3 className="font-display text-xl font-bold text-foreground mb-2">
+              {item.title}
+            </h3>
 
-          <p className="text-muted-foreground text-sm mb-4">
-            {item.description}
-          </p>
+            <p className="text-muted-foreground text-sm mb-4">
+              {item.description}
+            </p>
 
-          <div className="grid md:grid-cols-3 gap-4 text-sm">
-            <div>
-              <span className="text-accent font-medium block mb-1">Scope</span>
+            <div className="grid md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <span className="text-accent font-medium block mb-1">Scope</span>
               <ul className="list-disc list-inside text-muted-foreground space-y-1">
                 {item.scope.map((s) => (
                   <li key={s}>{s}</li>
@@ -125,10 +128,11 @@ const KeyInitiatives = () => (
               </ul>
             </div>
 
-            <div className="md:col-span-2">
+            <div>
               <span className="text-accent font-medium block mb-1">Outcome</span>
               <p className="text-muted-foreground">{item.outcome}</p>
             </div>
+          </div>
           </div>
         </div>
       </motion.div>
