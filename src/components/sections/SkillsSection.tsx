@@ -2,23 +2,23 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SecondaryTabs from "../SecondaryTabs";
 import {
-  Target,
-  Users,
-  TrendingUp,
-  BarChart3,
   Layers,
   Workflow,
+  Users,
+  Target,
+  BarChart3,
+  TrendingUp,
+  ClipboardList,
   Figma,
-  Slack,
   GitBranch,
-  Trello,
+  Slack,
   Database,
-  Cloud,
+  LayoutGrid,
 } from "lucide-react";
 
 const secondaryTabs = [
   { id: "product", label: "Product & Program" },
-  { id: "execution", label: "Execution & Analysis" },
+  { id: "execution", label: "Execution & Insights" },
   { id: "tools", label: "Tools & Platforms" },
 ];
 
@@ -42,7 +42,7 @@ const SkillsSection = () => {
           transition={{ duration: 0.2 }}
         >
           {activeTab === "product" && <ProductProgram />}
-          {activeTab === "execution" && <ExecutionAnalysis />}
+          {activeTab === "execution" && <ExecutionInsights />}
           {activeTab === "tools" && <ToolsPlatforms />}
         </motion.div>
       </AnimatePresence>
@@ -59,33 +59,38 @@ const ProductProgram = () => (
     <div className="grid md:grid-cols-3 gap-4">
       {[
         {
-          icon: <Target className="w-6 h-6" />,
-          title: "Product Strategy",
+          icon: <Layers className="w-6 h-6" />,
+          title: "Product Management",
           skills: [
-            "Problem Framing",
-            "Roadmap Definition",
-            "Prioritisation & Trade-offs",
-            "Outcome Definition",
+            "Product Ownership",
+            "Backlog Management",
+            "Roadmap Planning",
+            "Requirements Definition",
+            "Prioritisation",
+            "Stakeholder Needs Translation",
           ],
         },
         {
           icon: <Workflow className="w-6 h-6" />,
           title: "Program Delivery",
           skills: [
-            "Initiative Planning",
-            "Cross-functional Coordination",
+            "Program Planning",
             "Dependency Management",
+            "Cross-team Coordination",
+            "Delivery Tracking",
+            "Risk & Issue Management",
             "Delivery Governance",
           ],
         },
         {
           icon: <Users className="w-6 h-6" />,
-          title: "Stakeholder Management",
+          title: "Stakeholder & Team Leadership",
           skills: [
+            "Stakeholder Alignment",
             "Executive Communication",
-            "Expectation Alignment",
+            "Expectation Management",
             "Decision Facilitation",
-            "Risk & Constraint Management",
+            "Team Enablement",
           ],
         },
       ].map((category, i) => (
@@ -116,26 +121,26 @@ const ProductProgram = () => (
 );
 
 /* =========================
-   EXECUTION & ANALYSIS
+   EXECUTION & INSIGHTS
 ========================= */
 
-const ExecutionAnalysis = () => (
+const ExecutionInsights = () => (
   <div className="space-y-6">
     <div className="grid md:grid-cols-2 gap-6">
       {[
         {
-          icon: <TrendingUp className="w-6 h-6" />,
+          icon: <Target className="w-6 h-6" />,
           title: "Strategy Execution",
           skills: [
             "Translating Strategy into Plans",
             "OKRs & Success Metrics",
-            "Execution Tracking",
-            "Continuous Improvement",
+            "Execution Monitoring",
+            "Course Correction",
           ],
         },
         {
           icon: <BarChart3 className="w-6 h-6" />,
-          title: "Data & Insights",
+          title: "Data Analysis & Insights",
           skills: [
             "KPI Definition",
             "Performance Analysis",
@@ -144,23 +149,23 @@ const ExecutionAnalysis = () => (
           ],
         },
         {
-          icon: <Layers className="w-6 h-6" />,
-          title: "Operating Models",
+          icon: <TrendingUp className="w-6 h-6" />,
+          title: "Continuous Improvement",
           skills: [
-            "Delivery Frameworks",
-            "Team Rituals & Cadence",
-            "Governance Design",
-            "Scalable Processes",
+            "Feedback Loops",
+            "Process Optimisation",
+            "Iteration & Learning",
+            "Retrospectives",
           ],
         },
         {
-          icon: <Cloud className="w-6 h-6" />,
-          title: "Technical Fluency",
+          icon: <ClipboardList className="w-6 h-6" />,
+          title: "Operating Cadence",
           skills: [
-            "Working with Engineering Teams",
-            "System Constraints Awareness",
-            "Data & Platform Literacy",
-            "AI / Tech Product Context",
+            "Planning & Review Cycles",
+            "Governance Rhythms",
+            "Reporting & Visibility",
+            "Execution Discipline",
           ],
         },
       ].map((category, i) => (
@@ -200,14 +205,16 @@ const ToolsPlatforms = () => (
   <div className="space-y-6">
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
       {[
-        { icon: <Figma className="w-8 h-8" />, name: "Figma", category: "Design" },
-        { icon: <Slack className="w-8 h-8" />, name: "Slack", category: "Communication" },
-        { icon: <GitBranch className="w-8 h-8" />, name: "GitHub", category: "Version Control" },
-        { icon: <Trello className="w-8 h-8" />, name: "Jira", category: "Program Management" },
-        { icon: <BarChart3 className="w-8 h-8" />, name: "Amplitude", category: "Analytics" },
-        { icon: <Database className="w-8 h-8" />, name: "SQL / Data Tools", category: "Data" },
-        { icon: <Cloud className="w-8 h-8" />, name: "Cloud Platforms", category: "Infrastructure" },
-        { icon: <Layers className="w-8 h-8" />, name: "Documentation & Planning", category: "Delivery" },
+        { icon: <Figma className="w-8 h-8" />, name: "Figma", category: "Product & Design" },
+        { icon: <LayoutGrid className="w-8 h-8" />, name: "Miro", category: "Workshops & Discovery" },
+        { icon: <Workflow className="w-8 h-8" />, name: "Jira", category: "Program Delivery" },
+        { icon: <ClipboardList className="w-8 h-8" />, name: "Confluence", category: "Documentation" },
+        { icon: <LayoutGrid className="w-8 h-8" />, name: "Monday", category: "Work Management" },
+        { icon: <Database className="w-8 h-8" />, name: "Airtable", category: "Planning & Tracking" },
+        { icon: <LayoutGrid className="w-8 h-8" />, name: "Notion", category: "Knowledge Management" },
+        { icon: <BarChart3 className="w-8 h-8" />, name: "Tableau", category: "Analytics & Insights" },
+        { icon: <Slack className="w-8 h-8" />, name: "Slack", category: "Collaboration" },
+        { icon: <GitBranch className="w-8 h-8" />, name: "GitHub", category: "Collaboration" },
       ].map((tool, i) => (
         <motion.div
           key={tool.name}

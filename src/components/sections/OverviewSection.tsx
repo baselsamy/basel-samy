@@ -52,7 +52,7 @@ const AboutMe = () => (
         I am a senior product and program leader who specialises in turning
         strategic intent into measurable outcomes. My work sits at the
         intersection of product vision, delivery reality, and stakeholder
-        expectations — where clarity, prioritisation, and execution discipline
+        expectations, where clarity, prioritisation, and execution discipline
         matter most.
       </p>
 
