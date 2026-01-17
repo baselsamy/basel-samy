@@ -37,7 +37,7 @@ const Hero = () => {
                 Basel Samy
               </h1>
               <p className="text-lg md:text-xl text-accent font-medium mt-1">
-                Senior Product, Program & Operations Leader
+                Product & Program Delivery Leader
               </p>
             </motion.div>
 
@@ -47,21 +47,23 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-muted-foreground text-base md:text-lg max-w-2xl leading-relaxed"
             >
-              I design and scale complex programs and operating models that turn
-              executive strategy into real-world outcomes. With 12+ years of
-              experience across technology, education, AI, and marketplaces,
-              I’ve led multi-million-dollar portfolios, launched products at
-              national scale, and built the systems, teams, and KPIs that make
-              growth sustainable.
+              I work on complex product and program initiatives where strategy
+              needs to translate into clear plans, execution, and measurable
+              outcomes. With 12+ years of experience across technology,
+              education, and marketplace environments, I help teams move from
+              ambiguity to delivery through focused execution and
+              insight-driven decisions.
             </motion.p>
 
             <p className="text-muted-foreground text-sm md:text-base max-w-2xl">
-              I work at the intersection of strategy, product, and delivery —
-              where clarity, execution, and impact matter most.
+              My work sits at the intersection of product thinking, program
+              management, and data-informed execution — supporting teams as they
+              prioritise, deliver, and learn in complex, cross-functional
+              environments.
             </p>
 
             <p className="text-emerald-600 font-medium text-sm md:text-base">
-              Available for consulting, contract, and senior leadership roles
+              Open to full-time roles & consulting work
             </p>
 
             {/* CTAs and Social */}
